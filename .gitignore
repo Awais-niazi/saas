@@ -1,3 +1,9 @@
+# ignore vendor static files
+/home/awais-faiz/Dev/saas/src/staticfiles/vendors
+
+# ingore local static file root or local cdn
+local-cdn/
+
 venv/
 # Byte-compiled / optimized / DLL files
 __pycache__/
