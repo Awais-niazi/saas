@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
+
 {% block layout %}
 <p>Welcome aboard!</p>
+{% csrf_token %}
 
 {% include 'welcome-user-msg.html'%}
 <p>Page Visits: {{ queryset }}</p>
