@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from auth import views as auth_views
-
 urlpatterns = [
     path("", views.landing_page_view, name= 'landing_page'),
     path('admin/', admin.site.urls),
@@ -26,5 +25,10 @@ urlpatterns = [
     path('register/', auth_views.register_view),
     path('home/', views.home_view, name= 'home_view' ),
     path('about/', views.about_view, name= 'about_views'),
+    path('protected/', views.pw_protected_view),
+    path('protected/user-only/', views.user_only_view),
+    path('protected/staff-only/', views.staff_only_view),
     path('accounts/', include('allauth.urls')),
+    path('profiles/', include('profiles.urls')),
+
 ]
